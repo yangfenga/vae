@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+    span{
+        width: 100px;
+        height: 100px;
+        display: block;
+    }
+    .f{
+        width: 150px;
+        height: 150px;
+        line-height: 100px;
+        text-align: center;
+        background: -webkit-linear-gradient(left top, red,yellow,green); /**颜色渐变*/
+        border-radius: 50%;  /**变圆  或者改变形状长宽可进行调节一端变扁*/
+        box-shadow: 3px 3px 3px 3px #000000 ; /*立体感*/
+        box-sizing: border-box ;
+         /*
+         box-sizing:content-box; 标准盒子模型，往外撑开，为默认模型
+         box-sizing:border-box;  IE盒子模型，往里面撑
+         */
+    }
+    /*
+    css选择权重问题 ID 100； class 10 ； 标签 1
+    */
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <span>杨峰</span>
+    <img src="player.png" alt="">
+    <span>加油</span>
+    <p class="f">哦呀呀</p> -->
+    <button >1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+</body>
+</html>
+<script>
+    // var str='123';
+    // console.log(Number(str));
+    // console.log(parseInt(str));
+
+    //求和
+function sum (a,b,c){
+    var tatle = 0;
+    for(var i=0; i<arguments.length; i++)
+    {
+    console.log(arguments[i]);
+    tatle += arguments[i];
+    }
+   // return tatle ;
+}
+    var q =sum(1,2,3,4,5);
+    console.log(q);
+
+    //  var a=0||2; //对于||来说前面给前面，不成立给后面
+    // var b=0&&4; //对于&&来说前面成立给后面，前面不成立给前面
+
+
+    //0 NaN ''（空字符串） null undefined 布尔类型中的五个false 其他为true Boolean
+
+
+    //！！代表取反再取反 等同于Boolean（）转化
+    // console.log(a,b);
+    /* console.log 输出语句*/
+    //数组为引用数据类型
+    // NaN （not a number） 空字符穿 或者 字符串只有空格  number得到的结果为0
+    // parseint 只要第一个字符是非数字，那么结果为NaN
+    //arguments 实际参数集合
+    /**
+     * number类型含有非数字返回值为nan
+     * Number（）； parseInt    parseLoat
+    */
+    console.log('0'== 0 ); //==会把两遍转化成同一种类型在比较
+    //=== 不是同类型为flase；是在进行比较
+    console.log([]== false );//tostring 方法
+    /*
+    基本数据类型 string number Boolean null undefined
+    引用数据类型 [] {} function data Math 正则
+    基本数据类型操作的是一个值，引用数据类型操作的是一个地址
+    */
+   var name = 'z';  var age = '20';
+   var str =`我的名字是${name}我的年龄是${age}`;
+   console.log(str);
+   /**
+    * \'转译字符 '\'da\''
+    * typeof  查看数据类型，返回结果为字符串
+    * var str = {23 :'zz',age:9}
+    * obj[23] //这种方式适用于属性值是通过变量获取的情况
+   */
+   var oBtns = document.getElementsByTagName('button');
+    console.log(oBtns);
+    for(var i=0; i<oBtns.length;i++){
+        oBtns[i].onclick =function () {
+            console.log();
+            alert(this.innerHTML);
+        }
+
+    }
+    
+</script>
